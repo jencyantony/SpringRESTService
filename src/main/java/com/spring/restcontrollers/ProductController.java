@@ -21,7 +21,7 @@ public class ProductController {
 	
 	@RequestMapping(value="/registerProduct", method=RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
-	public ProductRegistrationDO registerProduct(@RequestBody ProductRegistrationDO productDAO){
+	public @ResponseBody ProductRegistrationDO registerProduct(@RequestBody ProductRegistrationDO productDAO){
 		return daoImpl.registerProduct(productDAO);
 	}
 	
